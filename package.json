@@ -1,0 +1,28 @@
+{
+  "name": "desenvolvix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Desenvolvix/desenvolvix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Desenvolvix/desenvolvix/issues"
+  },
+  "homepage": "https://github.com/Desenvolvix/desenvolvix#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "clean-css": "^5.3.2",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "uglify-js": "^3.17.4",
+    "validator": "^13.11.0"
+  }
+}
