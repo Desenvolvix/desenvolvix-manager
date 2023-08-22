@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
@@ -21,10 +22,10 @@ app.get("/", (req, res) => {
 });
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "testeDeCamelo99_",
-  database: "desenvolvix",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DBNAME,
 });
 
 app.post("/submit", (req, res) => {
