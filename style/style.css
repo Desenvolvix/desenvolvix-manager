@@ -14,12 +14,12 @@ body {
 
 /* Header */
 .logo {
-  width: 5.5rem;
+  width: 5rem;
   margin: 1rem 0rem 0rem 1rem;
 }
 .logo2 {
-  width: 5rem;
-  margin: 1rem 0rem 0rem 1rem;
+  width: 4rem;
+  margin: 1rem;
   animation: spin-scale 3.6s infinite;
 }
 
@@ -55,9 +55,21 @@ h6 {
 .descriptionsHeader {
   display: flex;
   align-items: center;
-  height: 8rem;
+  height: 6rem;
   justify-content: space-between;
+  position: sticky;
+
+  /* Glassmorfismo */
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid #f9f9f9;
 }
+
+.secOne {
+  margin-bottom: 4rem;
+}
+
 .buttonOrcament {
   width: 11rem;
   background-color: #3f3d56;
@@ -409,6 +421,12 @@ h6 {
   .descriptionSite {
     width: 35%;
   }
+
+  .svgResponsive {
+    width: 80%;
+    height: auto;
+    margin-top: 3rem;
+  }
 }
 @media (max-width: 831px) {
   .infosBeaulty {
@@ -441,12 +459,6 @@ h6 {
   .logo2 {
     width: 4rem;
     margin: 1rem 0rem 0rem 1rem;
-  }
-
-  .svgResponsive {
-    width: 80%;
-    height: auto;
-    margin-bottom: 3rem;
   }
 }
 @media (max-width: 570px) {
