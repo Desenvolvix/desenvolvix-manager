@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "rootpass",
+  password: "testeDeCamelo99_",
   database: "desenvolvix",
 });
 
