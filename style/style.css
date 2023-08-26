@@ -109,6 +109,12 @@ h6 {
 .mainSectionOne h3 {
   font-size: 2rem;
 }
+.bg_formContact {
+  background-image: url("../images/backgroundSectionContact.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+}
 .yourSite {
   font-weight: 600;
   /* font-family: 'Archivo', sans-serif; */
