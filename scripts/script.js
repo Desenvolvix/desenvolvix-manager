@@ -33,3 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   telInput.value = formatPhoneNumber(telInput.value);
 });
+s;
+function scrollToContact() {
+  const contactSection = document.getElementById("contact");
+  contactSection.scrollIntoView({ behavior: "smooth" });
+}
