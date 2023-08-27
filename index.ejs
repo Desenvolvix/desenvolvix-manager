@@ -34,6 +34,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <!-- Google Search -->
     <meta
       name="google-site-verification"
       content="LGlUjDW9RMA-K-g8NrP-vP2UBkdOZM_ZGpkR9XDVRVo"
@@ -47,6 +48,7 @@
         <a href="./">
           <img class="logo" src="./images/logoVector.png" alt="" />
         </a>
+
         <button class="buttonOrcament" onclick="scrollToContact()">
           Faça um orçamento
         </button>
@@ -55,6 +57,14 @@
         <div class="my-element"></div>
       </div>
     </header>
+    <% if (formSubmitted) { %>
+    <div style="max-width: 100%; font-size: 1.1rem; text-align: center">
+      <p class="fw-bolder">
+        A Desenvolvix Agradece a preferência! Entraremos em contato com você
+        &#x1F49B;
+      </p>
+    </div>
+    <% } %>
     <!-- Section One -->
     <section class="secOne">
       <div
