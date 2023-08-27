@@ -4,12 +4,9 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 const path = require("path");
 const validator = require("validator");
-const session = require("express-session");
 
 const app = express();
 
-app.set("view engine", "ejs");
-app.set("views", __dirname);
 app.use("/style", express.static(path.join(__dirname, "style")));
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use(
@@ -19,18 +16,9 @@ app.use(
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-  })
-);
-
+// Serve a página HTML
 app.get("/", (req, res) => {
-  const formSubmitted = req.session.formSubmitted || false;
-  req.session.formSubmitted = false;
-  res.render("index.ejs", { formSubmitted: formSubmitted });
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 const connection = mysql.createConnection({
@@ -70,8 +58,7 @@ app.post("/submit", (req, res) => {
         "Dados inseridos com sucesso. ID do novo lead:",
         results.insertId
       );
-      req.session.formSubmitted = true;
-      res.redirect("/");
+      res.status(200).redirect("/");
     }
   });
 });
