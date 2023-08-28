@@ -54,7 +54,7 @@ app.post("/submit", (req, res) => {
       console.error("Erro ao inserir dados:", err);
       res.status(500).send("<script>alert('Erro ao inserir dados no banco.'); window.location.href = '/'; </script>");
     } else {
-      res.status(201).send("<script>alert('Dados enviados com sucesso'); window.location.href = '/'; </script>");
+      res.status(201).send("<script>alert('Dados enviados com sucesso, entraremos em contato o mais rápido possível!'); window.location.href = '/'; </script>");
     }
   });
 });
