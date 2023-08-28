@@ -52,13 +52,9 @@ app.post("/submit", (req, res) => {
   connection.query("INSERT INTO leads SET ?", novoLead, (err, results) => {
     if (err) {
       console.error("Erro ao inserir dados:", err);
-      res.status(500).send("Erro ao inserir dados no banco.");
+      res.status(500).send("<script>alert('Erro ao inserir dados no banco.'); window.location.href = '/'; </script>");
     } else {
-      console.log(
-        "Dados inseridos com sucesso. ID do novo lead:",
-        results.insertId
-      );
-      res.status(200).redirect("/");
+      res.status(201).send("<script>alert('Dados enviados com sucesso'); window.location.href = '/'; </script>");
     }
   });
 });
